@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="./assets/commit-year-static.svg">
-  <img src="./assets/commit-year.svg" alt="최근 1년간의 일별 커밋 그래프" width="100%">
+  <img src="./assets/commit-year.svg" alt="최근 1년간의 일별 활동 그래프" width="100%">
 </picture>
 
 </div>

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""GitHub 잔디(공개 기여 달력) 데이터로 '1년간의 커밋' 애니메이션 SVG를 만듭니다.
+"""GitHub 잔디(공개 기여 달력) 데이터로 '1년간의 활동' 애니메이션 SVG를 만듭니다.
 
 - 표준 라이브러리만 사용합니다(pip 설치 불필요).
 - 데이터: https://github.com/users/<아이디>/contributions (공식 잔디와 같은 데이터)
@@ -129,11 +129,11 @@ def build(D):
                f'<text x="20" y="4" font-family="{SANS}" font-size="11" fill="#c8cdf0">일</text></g>')
     ph_anim = lambda attr: f'<animate attributeName="{attr}" {A} keyTimes="0;{SW};1" values="{x0};{end:.0f};{end:.0f}"/>'
     g = "".join(bars)
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="최근 1년간의 일별 커밋 파형. 막대가 높을수록 많이 쓴 날이고, 아래 칸은 주 단위 활동량">'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="최근 1년간의 일별 활동 파형. 막대가 높을수록 많이 쓴 날이고, 아래 칸은 주 단위 활동량">'
             f'<defs><linearGradient id="bandg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff1c0" stop-opacity="0"/><stop offset=".28" stop-color="#fff1c0" stop-opacity=".22"/><stop offset=".72" stop-color="#fff1c0" stop-opacity=".22"/><stop offset="1" stop-color="#fff1c0" stop-opacity="0"/></linearGradient><clipPath id="pl"><rect x="0" y="0" width="{end:.0f}" height="{H}"><animate attributeName="width" {A} keyTimes="0;{SW};1" values="{x0};{end:.0f};{end:.0f}"/></rect></clipPath>'
             '<clipPath id="cm"><rect x="-33" y="-7" width="29" height="14"/></clipPath><clipPath id="ct"><rect x="2.5" y="-7" width="9" height="14"/></clipPath><clipPath id="co"><rect x="10" y="-7" width="9" height="14"/></clipPath></defs>'
             f'<rect width="{W}" height="{H}" rx="14" fill="{BG}"/>' + f'<g>{FADE}{hl}</g>'
-            + f'<text x="28" y="38" font-family="{SANS}" font-size="20" font-weight="700" fill="#e8ebff">1년간의 커밋</text>'
+            + f'<text x="28" y="38" font-family="{SANS}" font-size="20" font-weight="700" fill="#e8ebff">1년간의 활동</text>'
             + f'<text x="772" y="37" text-anchor="end" font-family="{SANS}" font-size="13" fill="#aab2e0">막대가 높을수록 많이 쓴 날</text>'
             + f'<g fill="#6b75d6" opacity=".38">{g}</g><g clip-path="url(#pl)"><g fill="#ffc857">{FADE}{g}</g></g>'
             + f'<line x1="{x0}" y1="128" x2="{end:.0f}" y2="128" stroke="#e8ebff" stroke-width=".5" opacity=".25"/>'
