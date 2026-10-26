@@ -12,6 +12,6 @@
 
 <div align="center">
 
-<a href="https://cjsan30.github.io"><img src="https://img.shields.io/badge/Blog-d9a441?style=flat-square&logo=jekyll&logoColor=white" alt="Blog"></a><img src="./assets/gap.svg" width="48" height="20" alt=""><a href="https://www.instagram.com/mini.shell_/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a><img src="./assets/gap.svg" width="48" height="20" alt=""><a href="mailto:cjsan30@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Gmail"></a>
+<a href="https://cjsan30.github.io"><img src="./assets/badge-blog.svg" height="20" alt="Blog"></a><img src="./assets/gap.svg" width="38" height="20" alt=""><a href="https://www.instagram.com/mini.shell_/"><img src="./assets/badge-instagram.svg" height="20" alt="Instagram"></a><img src="./assets/gap.svg" width="38" height="20" alt=""><a href="mailto:cjsan30@gmail.com"><img src="./assets/badge-gmail.svg" height="20" alt="Gmail"></a>
 
 </div>
